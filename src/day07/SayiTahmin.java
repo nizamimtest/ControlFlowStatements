@@ -9,13 +9,24 @@ public class SayiTahmin {
         System.out.println("Bir sayı tuttum. Lütfen tahmin ediniz. (3 Hakkınız var)");
         //System.out.print(sayi);
         int tahmin;
-        for (int i = 0; i <3 ; i++) {
-            System.out.print((i+1)+". tahmininiz: ");
+        int i = 1;
+
+
+        for (;i <=3 ; i++) {
+            System.out.print((i)+". tahmininiz: ");
             tahmin=input.nextInt();
             if(sayi==tahmin){
                 System.out.println("Bildiniz.");
                 break;
+            }else if (sayi>tahmin){
+                System.out.println("Daha büyük bir sayı giriniz.");
+            }else {
+                System.out.println("Daha küçük bir sayı giriniz.");
             }
+        }
+
+        if (i==4){
+            System.out.println("Bilemediniz.");
         }
 
     }
